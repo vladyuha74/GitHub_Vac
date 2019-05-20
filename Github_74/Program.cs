@@ -21,9 +21,12 @@ namespace Github_74
                     min_chislo1 = array[i];
                 }  
             }
-            for(int j=0; j < array.Length; j++) //Ищем второе число.
+
+            //Ищем второе число. 
+            for (int j=0; j < array.Length; j++) //Ищем второе число.
             {
-                if ((array[j] < min_chislo2) & (array[j] != min_chislo1)) // Минимальное 1 число исключаем и задаем условие чтобы сравнивалось минимальным вторым числом.
+                // Минимальное 1 число исключаем и задаем условие чтобы сравнивалось минимальным вторым числом.
+                if ((array[j] < min_chislo2) & (array[j] != min_chislo1))
                 {
                     if (min_chislo2 > min_chislo1)
                     {
@@ -31,8 +34,8 @@ namespace Github_74
                     }
                 }
             }
-            summa = min_chislo1 + min_chislo2; // Сумируем минимальные числа
-            //summa = summa + min_chislo;
+            // Сумируем минимальные числа
+            summa = min_chislo1 + min_chislo2; 
             Console.Write("Итого: " + min_chislo1 + "+" + min_chislo2 + " = " + summa); // В итоге должно быть -10+0 = -10
             Console.ReadKey();
         }
